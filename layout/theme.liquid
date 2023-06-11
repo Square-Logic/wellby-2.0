@@ -8,8 +8,8 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 
-    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
-    <script src="{{ 'application.js' | asset_url }}" async></script>
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'application.js' | asset_url }}" defer></script>
     {{ content_for_header }}
     <!-- Header hook for plugins -->
     <style>
@@ -22,7 +22,6 @@
     </style>
 
     {{ 'application.css' | asset_url | stylesheet_tag }}
-
   </head>
   <body>
 
