@@ -20,11 +20,19 @@
             </div>
             <div class="line-image">
               <a href="{{ item.url }}">
-                <img src="{{ item | img_url: '200x200', crop: 'center' }}" alt="{{ item.title | escape }}">
+                <img
+                  src="{{ item | image_url: width: 200, height: 200, crop: 'center' }}"
+                  alt="{{ item.title | escape }}"
+                  width="{{ image.width }}"
+                  height="{{ image.height }}">
               </a>
 
               <a class="remove-line js-remove-line" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
-                <img src="{{ 'x-remove.svg' | asset_url }}" alt="Remove">
+                <img
+                  src="{{ 'x-remove.svg' | asset_url }}"
+                  alt="Remove"
+                  width="20"
+                  height="20">
               </a>
             </div>
           </div>
