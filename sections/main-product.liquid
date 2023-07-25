@@ -7,20 +7,20 @@
       {{ product.title }}
       <span class="price">{{ product.price | | money_without_trailing_zeros }}</span>
     </h2>
-    
+
     <div class="below-title">
       <div class="product-description">{{ product.description }}</div>
-    
+
       {% include 'add-to-cart-form' %}
     </div>
-   
+
   </div>
-  
-    
+
+
   {% for image in product.images %}
     <div class="product-image">
       <img src="{{ image.src | img_url: '1200x1200', crop: 'center' }}" alt="{{ image.alt | escape }}">
     </div>
-    
+
   {% endfor %}
 </div>
