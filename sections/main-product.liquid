@@ -5,7 +5,7 @@
   <div class="product-info product-info-section">
     <h2 class="product-title">
       {{ product.title }}
-      <span class="price">{{ product.price | | money_without_trailing_zeros }}</span>
+      <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
     </h2>
 
     <div class="below-title">
