@@ -26,7 +26,11 @@
 
     <div class="card-image">
       <a href="{{ product.url }}">
-        <img src="{{ product.featured_image.src | img_url: '1200x900', crop: 'center' }}" alt="{{ product.featured_image.alt | escape }}">
+        <img
+          src="{{ product.featured_image.src | image_url: width: 1200, height: 900, crop: 'center' }}"
+          alt="{{ product.featured_image.alt | escape }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}">
       </a>
     </div>
   </div>
